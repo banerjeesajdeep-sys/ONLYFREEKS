@@ -23,13 +23,13 @@ const people = [
     ]
   },
   {
-    id: "niggacock",
-    name: "Niggacock",
-    image: "images/person-two-main.jpg",
+    id: "swagger",
+    name: "Swagger",
+    image: "images/swagger.jpg",
     gallery: [
       {
-        title: "Person Two Image 1",
-        image: "images/person-two-1.jpg"
+        title: "Swagger Image 1",
+        image: "images/swagger.jpg"
       },
       {
         title: "Person Two Image 2",
