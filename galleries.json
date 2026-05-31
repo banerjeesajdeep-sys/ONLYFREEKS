@@ -25,13 +25,6 @@
               "tags": ["portrait", "featured"],
               "date": "2026-05-31"
             },
-            {
-              "src": "images/models/person-one-2.jpg",
-              "title": "Person One Image 2",
-              "caption": "Second image in the gallery.",
-              "tags": ["portrait"],
-              "date": "2026-05-31"
-            }
           ]
         },
         {
