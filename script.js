@@ -57,13 +57,13 @@ const people = [
   ]
 },
 {
-  id: "person4",
-  name: "Person Four",
-  image: "images/person-four.jpg",
+  id: "perlababe",
+  name: "Perlababe",
+  image: "images/perlababe.jpg",
   gallery: [
     {
-      title: "Person Four Image 1",
-      image: "images/person-four.jpg"
+      title: "Perlababe Image 1",
+      image: "images/perlababe.jpg"
     }
   ]
 },
