@@ -1,35 +1,80 @@
 const people = [
   {
-    name: "Person One",
-    image: "images/placeholder1.jpg"
+    id: "lebron-james",
+    name: "LeBron James",
+    image: "images/lebron-main.jpg",
+    gallery: [
+      {
+        title: "LeBron Image 1",
+        image: "images/lebron-1.jpg"
+      },
+      {
+        title: "LeBron Image 2",
+        image: "images/lebron-2.jpg"
+      },
+      {
+        title: "LeBron Image 3",
+        image: "images/lebron-3.jpg"
+      },
+      {
+        title: "LeBron Image 4",
+        image: "images/lebron-4.jpg"
+      }
+    ]
   },
   {
+    id: "person-two",
     name: "Person Two",
-    image: "images/placeholder2.jpg"
+    image: "images/person-two-main.jpg",
+    gallery: [
+      {
+        title: "Person Two Image 1",
+        image: "images/person-two-1.jpg"
+      },
+      {
+        title: "Person Two Image 2",
+        image: "images/person-two-2.jpg"
+      },
+      {
+        title: "Person Two Image 3",
+        image: "images/person-two-3.jpg"
+      }
+    ]
   },
   {
+    id: "person-three",
     name: "Person Three",
-    image: "images/placeholder3.jpg"
-  },
-  {
-    name: "Person Four",
-    image: "images/placeholder4.jpg"
-  },
-  {
-    name: "Person Five",
-    image: "images/placeholder5.jpg"
-  },
-  {
-    name: "Person Six",
-    image: "images/placeholder6.jpg"
+    image: "images/person-three-main.jpg",
+    gallery: [
+      {
+        title: "Person Three Image 1",
+        image: "images/person-three-1.jpg"
+      },
+      {
+        title: "Person Three Image 2",
+        image: "images/person-three-2.jpg"
+      }
+    ]
   }
 ];
 
 const gallery = document.getElementById("gallery");
 const searchInput = document.getElementById("searchInput");
+const backBtn = document.getElementById("backBtn");
+const pageTitle = document.getElementById("pageTitle");
+const siteLogo = document.getElementById("siteLogo");
 
-function displayPeople(list) {
+let currentView = "home";
+let currentPerson = null;
+
+function displayHomePage(list) {
+  currentView = "home";
+  currentPerson = null;
+
   gallery.innerHTML = "";
+  pageTitle.textContent = "Browse People";
+  searchInput.placeholder = "Search names...";
+  backBtn.style.display = "none";
 
   if (list.length === 0) {
     gallery.innerHTML = `<p class="no-results">No results found.</p>`;
@@ -47,18 +92,99 @@ function displayPeople(list) {
       </div>
     `;
 
+    card.addEventListener("click", () => {
+      displayPersonGallery(person);
+    });
+
     gallery.appendChild(card);
   });
 }
 
-searchInput.addEventListener("input", () => {
+function displayPersonGallery(person) {
+  currentView = "person";
+  currentPerson = person;
+
+  gallery.innerHTML = "";
+  pageTitle.textContent = person.name;
+  searchInput.value = "";
+  searchInput.placeholder = `Search ${person.name} gallery...`;
+  backBtn.style.display = "inline-block";
+
+  if (person.gallery.length === 0) {
+    gallery.innerHTML = `<p class="no-results">No images added yet.</p>`;
+    return;
+  }
+
+  person.gallery.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.title}">
+      <div class="card-info">
+        <h2>${item.title}</h2>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
+}
+
+function searchHomePage() {
   const searchValue = searchInput.value.toLowerCase();
 
   const filteredPeople = people.filter(person =>
     person.name.toLowerCase().includes(searchValue)
   );
 
-  displayPeople(filteredPeople);
+  displayHomePage(filteredPeople);
+}
+
+function searchPersonGallery() {
+  const searchValue = searchInput.value.toLowerCase();
+
+  const filteredGallery = currentPerson.gallery.filter(item =>
+    item.title.toLowerCase().includes(searchValue)
+  );
+
+  gallery.innerHTML = "";
+
+  if (filteredGallery.length === 0) {
+    gallery.innerHTML = `<p class="no-results">No results found.</p>`;
+    return;
+  }
+
+  filteredGallery.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.title}">
+      <div class="card-info">
+        <h2>${item.title}</h2>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
+}
+
+searchInput.addEventListener("input", () => {
+  if (currentView === "home") {
+    searchHomePage();
+  } else {
+    searchPersonGallery();
+  }
 });
 
-displayPeople(people);
+backBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  displayHomePage(people);
+});
+
+siteLogo.addEventListener("click", () => {
+  searchInput.value = "";
+  displayHomePage(people);
+});
+
+displayHomePage(people);
