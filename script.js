@@ -1,12 +1,12 @@
 const people = [
   {
-    id: "skibidi-1",
-    name: "Skibidi-1",
-    image: "images/skibidi-1",
+    id: "skibidi",
+    name: "Skibidi",
+    image: "images/skibidi.jpg",
     gallery: [
       {
-        title: "Skibidi-1 Image 1",
-        image: "images/skibidi-1.jpg"
+        title: "Skibidi Image 1",
+        image: "images/skibidi.jpg"
       },
       {
         title: "LeBron Image 2",
