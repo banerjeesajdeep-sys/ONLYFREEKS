@@ -51,8 +51,8 @@ const people = [
       image: "images/savaschultz.jpg"
     },
     {
-      title: "Person Three Image 2",
-      image: "images/person-three-2.jpg"
+      title: "Savaschultz Image 2",
+      image: "images/savaschultz-2.jpg"
     }
   ]
 },
