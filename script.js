@@ -42,20 +42,130 @@ const people = [
     ]
   },
   {
-    id: "savaschultz",
-    name: "Savaschultz",
-    image: "images/savaschultz.jpg",
-    gallery: [
-      {
-        title: "Savaschultz Image 1",
-        image: "images/savaschultz.jpg"
-      },
-      {
-        title: "Person Three Image 2",
-        image: "images/person-three-2.jpg"
-      }
-    ]
-  }
+  id: "savaschultz",
+  name: "Savaschultz",
+  image: "images/savaschultz.jpg",
+  gallery: [
+    {
+      title: "Savaschultz Image 1",
+      image: "images/savaschultz.jpg"
+    },
+    {
+      title: "Person Three Image 2",
+      image: "images/person-three-2.jpg"
+    }
+  ]
+},
+{
+  id: "person4",
+  name: "Person Four",
+  image: "images/person-four.jpg",
+  gallery: [
+    {
+      title: "Person Four Image 1",
+      image: "images/person-four.jpg"
+    }
+  ]
+},
+{
+  id: "person5",
+  name: "Person Five",
+  image: "images/person-five.jpg",
+  gallery: [
+    {
+      title: "Person Five Image 1",
+      image: "images/person-five.jpg"
+    }
+  ]
+},
+{
+  id: "person6",
+  name: "Person Six",
+  image: "images/person-six.jpg",
+  gallery: [
+    {
+      title: "Person Six Image 1",
+      image: "images/person-six.jpg"
+    }
+  ]
+},
+{
+  id: "person7",
+  name: "Person Seven",
+  image: "images/person-seven.jpg",
+  gallery: [
+    {
+      title: "Person Seven Image 1",
+      image: "images/person-seven.jpg"
+    }
+  ]
+},
+{
+  id: "person8",
+  name: "Person Eight",
+  image: "images/person-eight.jpg",
+  gallery: [
+    {
+      title: "Person Eight Image 1",
+      image: "images/person-eight.jpg"
+    }
+  ]
+},
+{
+  id: "person9",
+  name: "Person Nine",
+  image: "images/person-nine.jpg",
+  gallery: [
+    {
+      title: "Person Nine Image 1",
+      image: "images/person-nine.jpg"
+    }
+  ]
+},
+{
+  id: "person10",
+  name: "Person Ten",
+  image: "images/person-ten.jpg",
+  gallery: [
+    {
+      title: "Person Ten Image 1",
+      image: "images/person-ten.jpg"
+    }
+  ]
+},
+{
+  id: "person11",
+  name: "Person Eleven",
+  image: "images/person-eleven.jpg",
+  gallery: [
+    {
+      title: "Person Eleven Image 1",
+      image: "images/person-eleven.jpg"
+    }
+  ]
+},
+{
+  id: "person12",
+  name: "Person Twelve",
+  image: "images/person-twelve.jpg",
+  gallery: [
+    {
+      title: "Person Twelve Image 1",
+      image: "images/person-twelve.jpg"
+    }
+  ]
+},
+{
+  id: "person13",
+  name: "Person Thirteen",
+  image: "images/person-thirteen.jpg",
+  gallery: [
+    {
+      title: "Person Thirteen Image 1",
+      image: "images/person-thirteen.jpg"
+    }
+  ]
+}
 ];
 
 const gallery = document.getElementById("gallery");
