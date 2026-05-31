@@ -11,19 +11,7 @@ function makeGallery(id, name, totalImages = 50) {
     };
   });
 }
-function makeGallery(id, name, totalImages = 50) {
-  return Array.from({ length: totalImages }, (_, i) => {
-    const imageNumber = i + 1;
 
-    return {
-      title: `${name} Image ${imageNumber}`,
-      image:
-        imageNumber === 1
-          ? `images/${id}.jpg`
-          : `images/${id}-${imageNumber}.jpg`
-    };
-  });
-}
 const people = [
   {
     id: "tanababyxo",
@@ -102,306 +90,306 @@ const people = [
     name: "Seracortinez",
     image: "images/seracortinez.jpg",
     gallery: makeGallery("seracortinez", "Seracortinez")
-    ,
-{
-  id: "person14",
-  name: "Person14",
-  image: "images/person14.jpg",
-  gallery: makeGallery("person14", "Person14")
-},
-{
-  id: "person15",
-  name: "Person15",
-  image: "images/person15.jpg",
-  gallery: makeGallery("person15", "Person15")
-},
-{
-  id: "person16",
-  name: "Person16",
-  image: "images/person16.jpg",
-  gallery: makeGallery("person16", "Person16")
-},
-{
-  id: "person17",
-  name: "Person17",
-  image: "images/person17.jpg",
-  gallery: makeGallery("person17", "Person17")
-},
-{
-  id: "person18",
-  name: "Person18",
-  image: "images/person18.jpg",
-  gallery: makeGallery("person18", "Person18")
-},
-{
-  id: "person19",
-  name: "Person19",
-  image: "images/person19.jpg",
-  gallery: makeGallery("person19", "Person19")
-},
-{
-  id: "person20",
-  name: "Person20",
-  image: "images/person20.jpg",
-  gallery: makeGallery("person20", "Person20")
-},
-{
-  id: "person21",
-  name: "Person21",
-  image: "images/person21.jpg",
-  gallery: makeGallery("person21", "Person21")
-},
-{
-  id: "person22",
-  name: "Person22",
-  image: "images/person22.jpg",
-  gallery: makeGallery("person22", "Person22")
-},
-{
-  id: "person23",
-  name: "Person23",
-  image: "images/person23.jpg",
-  gallery: makeGallery("person23", "Person23")
-},
-{
-  id: "person24",
-  name: "Person24",
-  image: "images/person24.jpg",
-  gallery: makeGallery("person24", "Person24")
-},
-{
-  id: "person25",
-  name: "Person25",
-  image: "images/person25.jpg",
-  gallery: makeGallery("person25", "Person25")
-},
-{
-  id: "person26",
-  name: "Person26",
-  image: "images/person26.jpg",
-  gallery: makeGallery("person26", "Person26")
-},
-{
-  id: "person27",
-  name: "Person27",
-  image: "images/person27.jpg",
-  gallery: makeGallery("person27", "Person27")
-},
-{
-  id: "person28",
-  name: "Person28",
-  image: "images/person28.jpg",
-  gallery: makeGallery("person28", "Person28")
-},
-{
-  id: "person29",
-  name: "Person29",
-  image: "images/person29.jpg",
-  gallery: makeGallery("person29", "Person29")
-},
-{
-  id: "person30",
-  name: "Person30",
-  image: "images/person30.jpg",
-  gallery: makeGallery("person30", "Person30")
-},
-{
-  id: "person31",
-  name: "Person31",
-  image: "images/person31.jpg",
-  gallery: makeGallery("person31", "Person31")
-},
-{
-  id: "person32",
-  name: "Person32",
-  image: "images/person32.jpg",
-  gallery: makeGallery("person32", "Person32")
-},
-{
-  id: "person33",
-  name: "Person33",
-  image: "images/person33.jpg",
-  gallery: makeGallery("person33", "Person33")
-},
-{
-  id: "person34",
-  name: "Person34",
-  image: "images/person34.jpg",
-  gallery: makeGallery("person34", "Person34")
-},
-{
-  id: "person35",
-  name: "Person35",
-  image: "images/person35.jpg",
-  gallery: makeGallery("person35", "Person35")
-},
-{
-  id: "person36",
-  name: "Person36",
-  image: "images/person36.jpg",
-  gallery: makeGallery("person36", "Person36")
-},
-{
-  id: "person37",
-  name: "Person37",
-  image: "images/person37.jpg",
-  gallery: makeGallery("person37", "Person37")
-},
-{
-  id: "person38",
-  name: "Person38",
-  image: "images/person38.jpg",
-  gallery: makeGallery("person38", "Person38")
-},
-{
-  id: "person39",
-  name: "Person39",
-  image: "images/person39.jpg",
-  gallery: makeGallery("person39", "Person39")
-},
-{
-  id: "person40",
-  name: "Person40",
-  image: "images/person40.jpg",
-  gallery: makeGallery("person40", "Person40")
-},
-{
-  id: "person41",
-  name: "Person41",
-  image: "images/person41.jpg",
-  gallery: makeGallery("person41", "Person41")
-},
-{
-  id: "person42",
-  name: "Person42",
-  image: "images/person42.jpg",
-  gallery: makeGallery("person42", "Person42")
-},
-{
-  id: "person43",
-  name: "Person43",
-  image: "images/person43.jpg",
-  gallery: makeGallery("person43", "Person43")
-},
-{
-  id: "person44",
-  name: "Person44",
-  image: "images/person44.jpg",
-  gallery: makeGallery("person44", "Person44")
-},
-{
-  id: "person45",
-  name: "Person45",
-  image: "images/person45.jpg",
-  gallery: makeGallery("person45", "Person45")
-},
-{
-  id: "person46",
-  name: "Person46",
-  image: "images/person46.jpg",
-  gallery: makeGallery("person46", "Person46")
-},
-{
-  id: "person47",
-  name: "Person47",
-  image: "images/person47.jpg",
-  gallery: makeGallery("person47", "Person47")
-},
-{
-  id: "person48",
-  name: "Person48",
-  image: "images/person48.jpg",
-  gallery: makeGallery("person48", "Person48")
-},
-{
-  id: "person49",
-  name: "Person49",
-  image: "images/person49.jpg",
-  gallery: makeGallery("person49", "Person49")
-},
-{
-  id: "person50",
-  name: "Person50",
-  image: "images/person50.jpg",
-  gallery: makeGallery("person50", "Person50")
-},
-{
-  id: "person51",
-  name: "Person51",
-  image: "images/person51.jpg",
-  gallery: makeGallery("person51", "Person51")
-},
-{
-  id: "person52",
-  name: "Person52",
-  image: "images/person52.jpg",
-  gallery: makeGallery("person52", "Person52")
-},
-{
-  id: "person53",
-  name: "Person53",
-  image: "images/person53.jpg",
-  gallery: makeGallery("person53", "Person53")
-},
-{
-  id: "person54",
-  name: "Person54",
-  image: "images/person54.jpg",
-  gallery: makeGallery("person54", "Person54")
-},
-{
-  id: "person55",
-  name: "Person55",
-  image: "images/person55.jpg",
-  gallery: makeGallery("person55", "Person55")
-},
-{
-  id: "person56",
-  name: "Person56",
-  image: "images/person56.jpg",
-  gallery: makeGallery("person56", "Person56")
-},
-{
-  id: "person57",
-  name: "Person57",
-  image: "images/person57.jpg",
-  gallery: makeGallery("person57", "Person57")
-},
-{
-  id: "person58",
-  name: "Person58",
-  image: "images/person58.jpg",
-  gallery: makeGallery("person58", "Person58")
-},
-{
-  id: "person59",
-  name: "Person59",
-  image: "images/person59.jpg",
-  gallery: makeGallery("person59", "Person59")
-},
-{
-  id: "person60",
-  name: "Person60",
-  image: "images/person60.jpg",
-  gallery: makeGallery("person60", "Person60")
-},
-{
-  id: "person61",
-  name: "Person61",
-  image: "images/person61.jpg",
-  gallery: makeGallery("person61", "Person61")
-},
-{
-  id: "person62",
-  name: "Person62",
-  image: "images/person62.jpg",
-  gallery: makeGallery("person62", "Person62")
-},
-{
-  id: "person63",
-  name: "Person63",
-  image: "images/person63.jpg",
-  gallery: makeGallery("person63", "Person63")
+  },
+  {
+    id: "person14",
+    name: "Person14",
+    image: "images/person14.jpg",
+    gallery: makeGallery("person14", "Person14")
+  },
+  {
+    id: "person15",
+    name: "Person15",
+    image: "images/person15.jpg",
+    gallery: makeGallery("person15", "Person15")
+  },
+  {
+    id: "person16",
+    name: "Person16",
+    image: "images/person16.jpg",
+    gallery: makeGallery("person16", "Person16")
+  },
+  {
+    id: "person17",
+    name: "Person17",
+    image: "images/person17.jpg",
+    gallery: makeGallery("person17", "Person17")
+  },
+  {
+    id: "person18",
+    name: "Person18",
+    image: "images/person18.jpg",
+    gallery: makeGallery("person18", "Person18")
+  },
+  {
+    id: "person19",
+    name: "Person19",
+    image: "images/person19.jpg",
+    gallery: makeGallery("person19", "Person19")
+  },
+  {
+    id: "person20",
+    name: "Person20",
+    image: "images/person20.jpg",
+    gallery: makeGallery("person20", "Person20")
+  },
+  {
+    id: "person21",
+    name: "Person21",
+    image: "images/person21.jpg",
+    gallery: makeGallery("person21", "Person21")
+  },
+  {
+    id: "person22",
+    name: "Person22",
+    image: "images/person22.jpg",
+    gallery: makeGallery("person22", "Person22")
+  },
+  {
+    id: "person23",
+    name: "Person23",
+    image: "images/person23.jpg",
+    gallery: makeGallery("person23", "Person23")
+  },
+  {
+    id: "person24",
+    name: "Person24",
+    image: "images/person24.jpg",
+    gallery: makeGallery("person24", "Person24")
+  },
+  {
+    id: "person25",
+    name: "Person25",
+    image: "images/person25.jpg",
+    gallery: makeGallery("person25", "Person25")
+  },
+  {
+    id: "person26",
+    name: "Person26",
+    image: "images/person26.jpg",
+    gallery: makeGallery("person26", "Person26")
+  },
+  {
+    id: "person27",
+    name: "Person27",
+    image: "images/person27.jpg",
+    gallery: makeGallery("person27", "Person27")
+  },
+  {
+    id: "person28",
+    name: "Person28",
+    image: "images/person28.jpg",
+    gallery: makeGallery("person28", "Person28")
+  },
+  {
+    id: "person29",
+    name: "Person29",
+    image: "images/person29.jpg",
+    gallery: makeGallery("person29", "Person29")
+  },
+  {
+    id: "person30",
+    name: "Person30",
+    image: "images/person30.jpg",
+    gallery: makeGallery("person30", "Person30")
+  },
+  {
+    id: "person31",
+    name: "Person31",
+    image: "images/person31.jpg",
+    gallery: makeGallery("person31", "Person31")
+  },
+  {
+    id: "person32",
+    name: "Person32",
+    image: "images/person32.jpg",
+    gallery: makeGallery("person32", "Person32")
+  },
+  {
+    id: "person33",
+    name: "Person33",
+    image: "images/person33.jpg",
+    gallery: makeGallery("person33", "Person33")
+  },
+  {
+    id: "person34",
+    name: "Person34",
+    image: "images/person34.jpg",
+    gallery: makeGallery("person34", "Person34")
+  },
+  {
+    id: "person35",
+    name: "Person35",
+    image: "images/person35.jpg",
+    gallery: makeGallery("person35", "Person35")
+  },
+  {
+    id: "person36",
+    name: "Person36",
+    image: "images/person36.jpg",
+    gallery: makeGallery("person36", "Person36")
+  },
+  {
+    id: "person37",
+    name: "Person37",
+    image: "images/person37.jpg",
+    gallery: makeGallery("person37", "Person37")
+  },
+  {
+    id: "person38",
+    name: "Person38",
+    image: "images/person38.jpg",
+    gallery: makeGallery("person38", "Person38")
+  },
+  {
+    id: "person39",
+    name: "Person39",
+    image: "images/person39.jpg",
+    gallery: makeGallery("person39", "Person39")
+  },
+  {
+    id: "person40",
+    name: "Person40",
+    image: "images/person40.jpg",
+    gallery: makeGallery("person40", "Person40")
+  },
+  {
+    id: "person41",
+    name: "Person41",
+    image: "images/person41.jpg",
+    gallery: makeGallery("person41", "Person41")
+  },
+  {
+    id: "person42",
+    name: "Person42",
+    image: "images/person42.jpg",
+    gallery: makeGallery("person42", "Person42")
+  },
+  {
+    id: "person43",
+    name: "Person43",
+    image: "images/person43.jpg",
+    gallery: makeGallery("person43", "Person43")
+  },
+  {
+    id: "person44",
+    name: "Person44",
+    image: "images/person44.jpg",
+    gallery: makeGallery("person44", "Person44")
+  },
+  {
+    id: "person45",
+    name: "Person45",
+    image: "images/person45.jpg",
+    gallery: makeGallery("person45", "Person45")
+  },
+  {
+    id: "person46",
+    name: "Person46",
+    image: "images/person46.jpg",
+    gallery: makeGallery("person46", "Person46")
+  },
+  {
+    id: "person47",
+    name: "Person47",
+    image: "images/person47.jpg",
+    gallery: makeGallery("person47", "Person47")
+  },
+  {
+    id: "person48",
+    name: "Person48",
+    image: "images/person48.jpg",
+    gallery: makeGallery("person48", "Person48")
+  },
+  {
+    id: "person49",
+    name: "Person49",
+    image: "images/person49.jpg",
+    gallery: makeGallery("person49", "Person49")
+  },
+  {
+    id: "person50",
+    name: "Person50",
+    image: "images/person50.jpg",
+    gallery: makeGallery("person50", "Person50")
+  },
+  {
+    id: "person51",
+    name: "Person51",
+    image: "images/person51.jpg",
+    gallery: makeGallery("person51", "Person51")
+  },
+  {
+    id: "person52",
+    name: "Person52",
+    image: "images/person52.jpg",
+    gallery: makeGallery("person52", "Person52")
+  },
+  {
+    id: "person53",
+    name: "Person53",
+    image: "images/person53.jpg",
+    gallery: makeGallery("person53", "Person53")
+  },
+  {
+    id: "person54",
+    name: "Person54",
+    image: "images/person54.jpg",
+    gallery: makeGallery("person54", "Person54")
+  },
+  {
+    id: "person55",
+    name: "Person55",
+    image: "images/person55.jpg",
+    gallery: makeGallery("person55", "Person55")
+  },
+  {
+    id: "person56",
+    name: "Person56",
+    image: "images/person56.jpg",
+    gallery: makeGallery("person56", "Person56")
+  },
+  {
+    id: "person57",
+    name: "Person57",
+    image: "images/person57.jpg",
+    gallery: makeGallery("person57", "Person57")
+  },
+  {
+    id: "person58",
+    name: "Person58",
+    image: "images/person58.jpg",
+    gallery: makeGallery("person58", "Person58")
+  },
+  {
+    id: "person59",
+    name: "Person59",
+    image: "images/person59.jpg",
+    gallery: makeGallery("person59", "Person59")
+  },
+  {
+    id: "person60",
+    name: "Person60",
+    image: "images/person60.jpg",
+    gallery: makeGallery("person60", "Person60")
+  },
+  {
+    id: "person61",
+    name: "Person61",
+    image: "images/person61.jpg",
+    gallery: makeGallery("person61", "Person61")
+  },
+  {
+    id: "person62",
+    name: "Person62",
+    image: "images/person62.jpg",
+    gallery: makeGallery("person62", "Person62")
+  },
+  {
+    id: "person63",
+    name: "Person63",
+    image: "images/person63.jpg",
+    gallery: makeGallery("person63", "Person63")
   }
 ];
 
