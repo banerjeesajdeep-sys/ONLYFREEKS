@@ -123,40 +123,40 @@ const people = [
   ]
 },
 {
-  id: "person10",
-  name: "Person Ten",
-  image: "images/person-ten.jpg",
+  id: "tripleceleste",
+  name: "Tripleceleste",
+  image: "images/tripleceleste.jpg",
   gallery: [
     {
-      title: "Person Ten Image 1",
-      image: "images/person-ten.jpg"
+      title: "Tripleceleste Image 1",
+      image: "images/tripleceleste.jpg"
     }
   ]
 },
 {
-  id: "person11",
-  name: "Person Eleven",
-  image: "images/person-eleven.jpg",
+  id: "autumnfalls",
+  name: "Autumnfalls",
+  image: "images/autumnfalls.jpg",
   gallery: [
     {
-      title: "Person Eleven Image 1",
-      image: "images/person-eleven.jpg"
+      title: "Autumnfalls Image 1",
+      image: "images/autumnfalls.jpg"
     }
   ]
 },
 {
-  id: "person12",
-  name: "Person Twelve",
-  image: "images/person-twelve.jpg",
+  id: "lexi2legit",
+  name: "Lexi2legit",
+  image: "images/lexi2legit.jpg",
   gallery: [
     {
-      title: "Person Twelve Image 1",
-      image: "images/person-twelve.jpg"
+      title: "Lexi2legit Image 1",
+      image: "images/lexi2legit.jpg"
     }
   ]
 },
 {
-  id: "person13",
+  id: "",
   name: "Person Thirteen",
   image: "images/person-thirteen.jpg",
   gallery: [
