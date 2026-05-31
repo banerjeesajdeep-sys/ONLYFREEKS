@@ -23,8 +23,8 @@ const people = [
     ]
   },
   {
-    id: "person-two",
-    name: "Person Two",
+    id: "niggacock",
+    name: "Niggacock",
     image: "images/person-two-main.jpg",
     gallery: [
       {
