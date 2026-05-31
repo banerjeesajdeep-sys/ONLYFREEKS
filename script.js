@@ -1,171 +1,96 @@
+function makeGallery(id, name, totalImages = 50) {
+  return Array.from({ length: totalImages }, (_, i) => {
+    const imageNumber = i + 1;
+
+    return {
+      title: `${name} Image ${imageNumber}`,
+      image:
+        imageNumber === 1
+          ? `images/${id}.jpg`
+          : `images/${id}-${imageNumber}.jpg`
+    };
+  });
+}
+
 const people = [
   {
     id: "tanababyxo",
     name: "Tanababyxo",
     image: "images/tanababyxo.jpg",
-    gallery: [
-      {
-        title: "Tanababyxo Image 1",
-        image: "images/tanababyxo.jpg"
-      },
-      {
-        title: "LeBron Image 2",
-        image: "images/lebron-2.jpg"
-      },
-      {
-        title: "LeBron Image 3",
-        image: "images/lebron-3.jpg"
-      },
-      {
-        title: "LeBron Image 4",
-        image: "images/lebron-4.jpg"
-      }
-    ]
+    gallery: makeGallery("tanababyxo", "Tanababyxo")
   },
   {
     id: "vegathompson",
     name: "Vegathompson",
     image: "images/vegathompson.jpg",
-    gallery: [
-      {
-        title: "Vegathompson Image 1",
-        image: "images/vegathompson.jpg"
-      },
-      {
-        title: "Person Two Image 2",
-        image: "images/person-two-2.jpg"
-      },
-      {
-        title: "Person Two Image 3",
-        image: "images/person-two-3.jpg"
-      }
-    ]
+    gallery: makeGallery("vegathompson", "Vegathompson")
   },
   {
-  id: "savaschultz",
-  name: "Savaschultz",
-  image: "images/savaschultz.jpg",
-  gallery: [
-    {
-      title: "Savaschultz Image 1",
-      image: "images/savaschultz.jpg"
-    },
-    {
-      title: "Savaschultz Image 2",
-      image: "images/savaschultz-2.jpg"
-    }
-  ]
-},
-{
-  id: "perlababe",
-  name: "Perlababe",
-  image: "images/perlababe.jpg",
-  gallery: [
-    {
-      title: "Perlababe Image 1",
-      image: "images/perlababe.jpg"
-    }
-  ]
-},
-{
-  id: "noturhoneybb",
-  name: "Noturhoneybb",
-  image: "images/noturhoneybb.jpg",
-  gallery: [
-    {
-      title: "Noturhoneybb Image 1",
-      image: "images/noturhoneybb.jpg"
-    }
-  ]
-},
-{
-  id: "wettmelons",
-  name: "Wettmelons",
-  image: "images/wettmelons.jpg",
-  gallery: [
-    {
-      title: "Wettmelons Image 1",
-      image: "images/wettmelons.jpg"
-    }
-  ]
-},
-{
-  id: "sweetmuffins",
-  name: "Sweetmuffins",
-  image: "images/sweetmuffins.jpg",
-  gallery: [
-    {
-      title: "Sweetmuffins Image 1",
-      image: "images/sweetmuffins.jpg"
-    }
-  ]
-},
-{
-  id: "lilyphilips",
-  name: "Lilyphilips",
-  image: "images/lilyphilips.jpg",
-  gallery: [
-    {
-      title: "Lilyphilips Image 1",
-      image: "images/lilyphilips.jpg"
-    }
-  ]
-},
-{
-  id: "emarrb",
-  name: "Emarrb",
-  image: "images/emarrb.jpg",
-  gallery: [
-    {
-      title: "Emarrb Image 1",
-      image: "images/emarrb.jpg"
-    }
-  ]
-},
-{
-  id: "tripleceleste",
-  name: "Tripleceleste",
-  image: "images/tripleceleste.jpg",
-  gallery: [
-    {
-      title: "Tripleceleste Image 1",
-      image: "images/tripleceleste.jpg"
-    }
-  ]
-},
-{
-  id: "autumnfalls",
-  name: "Autumnfalls",
-  image: "images/autumnfalls.jpg",
-  gallery: [
-    {
-      title: "Autumnfalls Image 1",
-      image: "images/autumnfalls.jpg"
-    }
-  ]
-},
-{
-  id: "lexi2legit",
-  name: "Lexi2legit",
-  image: "images/lexi2legit.jpg",
-  gallery: [
-    {
-      title: "Lexi2legit Image 1",
-      image: "images/lexi2legit.jpg"
-    }
-  ]
-},
-{
-  id: "seracortinez",
-  name: "Seracortinez",
-  image: "images/seracortinez.jpg",
-  gallery: [
-    {
-      title: "Seracortinez Image 1",
-      image: "images/seracortinez.jpg"
-    }
-  ]
-}
+    id: "savaschultz",
+    name: "Savaschultz",
+    image: "images/savaschultz.jpg",
+    gallery: makeGallery("savaschultz", "Savaschultz")
+  },
+  {
+    id: "perlababe",
+    name: "Perlababe",
+    image: "images/perlababe.jpg",
+    gallery: makeGallery("perlababe", "Perlababe")
+  },
+  {
+    id: "noturhoneybb",
+    name: "Noturhoneybb",
+    image: "images/noturhoneybb.jpg",
+    gallery: makeGallery("noturhoneybb", "Noturhoneybb")
+  },
+  {
+    id: "wettmelons",
+    name: "Wettmelons",
+    image: "images/wettmelons.jpg",
+    gallery: makeGallery("wettmelons", "Wettmelons")
+  },
+  {
+    id: "sweetmuffins",
+    name: "Sweetmuffins",
+    image: "images/sweetmuffins.jpg",
+    gallery: makeGallery("sweetmuffins", "Sweetmuffins")
+  },
+  {
+    id: "lilyphilips",
+    name: "Lilyphilips",
+    image: "images/lilyphilips.jpg",
+    gallery: makeGallery("lilyphilips", "Lilyphilips")
+  },
+  {
+    id: "emarrb",
+    name: "Emarrb",
+    image: "images/emarrb.jpg",
+    gallery: makeGallery("emarrb", "Emarrb")
+  },
+  {
+    id: "tripleceleste",
+    name: "Tripleceleste",
+    image: "images/tripleceleste.jpg",
+    gallery: makeGallery("tripleceleste", "Tripleceleste")
+  },
+  {
+    id: "autumnfalls",
+    name: "Autumnfalls",
+    image: "images/autumnfalls.jpg",
+    gallery: makeGallery("autumnfalls", "Autumnfalls")
+  },
+  {
+    id: "lexi2legit",
+    name: "Lexi2legit",
+    image: "images/lexi2legit.jpg",
+    gallery: makeGallery("lexi2legit", "Lexi2legit")
+  },
+  {
+    id: "seracortinez",
+    name: "Seracortinez",
+    image: "images/seracortinez.jpg",
+    gallery: makeGallery("seracortinez", "Seracortinez")
+  }
 ];
 
 const gallery = document.getElementById("gallery");
