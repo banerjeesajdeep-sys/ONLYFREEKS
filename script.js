@@ -68,13 +68,13 @@ const people = [
   ]
 },
 {
-  id: "person5",
-  name: "Person Five",
-  image: "images/person-five.jpg",
+  id: "noturhoneybb",
+  name: "Noturhoneybb",
+  image: "images/noturhoneybb.jpg",
   gallery: [
     {
-      title: "Person Five Image 1",
-      image: "images/person-five.jpg"
+      title: "Noturhoneybb Image 1",
+      image: "images/noturhoneybb.jpg"
     }
   ]
 },
