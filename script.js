@@ -5,8 +5,8 @@ const people = [
     image: "images/skibidi-1",
     gallery: [
       {
-        title: "LeBron Image 1",
-        image: "images/lebron-1.jpg"
+        title: "Skibidi-1 Image 1",
+        image: "images/skibidi-1.jpg"
       },
       {
         title: "LeBron Image 2",
