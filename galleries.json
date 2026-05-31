@@ -13,13 +13,13 @@
           "name": "Person One",
           "slug": "person-one",
           "bio": "Short description for this person's gallery.",
-          "cover": "images/models/person-one-cover.jpg",
+          "cover": "images/person-one-1.jpg",
           "tags": ["featured", "new"],
           "featured": true,
           "date": "2026-05-31",
           "images": [
             {
-              "src": "images/models/person-one-1.jpg",
+              "src": "images/person-one-1.jpg",
               "title": "Person One Image 1",
               "caption": "First image in the gallery.",
               "tags": ["portrait", "featured"],
