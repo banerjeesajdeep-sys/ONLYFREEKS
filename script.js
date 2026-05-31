@@ -101,24 +101,24 @@ const people = [
   ]
 },
 {
-  id: "person8",
-  name: "Person Eight",
-  image: "images/person-eight.jpg",
+  id: "lilyphilips",
+  name: "Lilyphilips",
+  image: "images/lilyphilips.jpg",
   gallery: [
     {
-      title: "Person Eight Image 1",
-      image: "images/person-eight.jpg"
+      title: "Lilyphilips Image 1",
+      image: "images/lilyphilips.jpg"
     }
   ]
 },
 {
-  id: "person9",
-  name: "Person Nine",
-  image: "images/person-nine.jpg",
+  id: "emarrb",
+  name: "Emarrb",
+  image: "images/emarrb.jpg",
   gallery: [
     {
-      title: "Person Nine Image 1",
-      image: "images/person-nine.jpg"
+      title: "Emarrb Image 1",
+      image: "images/emarrb.jpg"
     }
   ]
 },
