@@ -460,46 +460,130 @@ const trendingBoxes = [
 
 const categoryBoxes = [
   {
-    id: "ass",
-    title: "Ass",
-    description: "A gallery full of ass images.",
-    image: "images/categories-ass.jpg",
-    gallery: makeCategoryGallery("ass", "Ass", 40)
+    id: "cats",
+    title: "Cats",
+    description: "A gallery full of cat images.",
+    image: "images/categories-cats.jpg",
+    gallery: makeCategoryGallery("cats", "Cats", 20)
   },
   {
-    id: "tits",
-    title: "Tits",
-    description: "A gallery full of tit images.",
-    image: "images/categories-tits.jpg",
-    gallery: makeCategoryGallery("tits", "Tits", 40)
+    id: "dogs",
+    title: "Dogs",
+    description: "A gallery full of dog images.",
+    image: "images/categories-dogs.jpg",
+    gallery: makeCategoryGallery("dogs", "Dogs", 20)
   },
   {
-    id: "thighs",
-    title: "Thighs",
-    description: "A gallery full of thigh images.",
-    image: "images/categories-thighs.jpg",
-    gallery: makeCategoryGallery("thighs", "Thighs", 40)
+    id: "cars",
+    title: "Cars",
+    description: "A gallery full of car images.",
+    image: "images/categories-cars.jpg",
+    gallery: makeCategoryGallery("cars", "Cars", 20)
   },
   {
-    id: "goth",
-    title: "Goth",
-    description: "A gallery full of goth images.",
-    image: "images/categories-goth.jpg",
-    gallery: makeCategoryGallery("goth", "Goth", 40)
+    id: "nature",
+    title: "Nature",
+    description: "A gallery full of nature images.",
+    image: "images/categories-nature.jpg",
+    gallery: makeCategoryGallery("nature", "Nature", 20)
   },
   {
-    id: "athletic",
-    title: "Athletic",
-    description: "A gallery full of athletic images.",
-    image: "images/categories-athletic.jpg",
-    gallery: makeCategoryGallery("athletic", "Athletic", 40)
+    id: "food",
+    title: "Food",
+    description: "A gallery full of food images.",
+    image: "images/categories-food.jpg",
+    gallery: makeCategoryGallery("food", "Food", 20)
   },
   {
-    id: "feet",
-    title: "Feet",
-    description: "A gallery full of feet images.",
-    image: "images/categories-feet.jpg",
-    gallery: makeCategoryGallery("feet", "Feet", 40)
+    id: "sports",
+    title: "Sports",
+    description: "A gallery full of sports images.",
+    image: "images/categories-sports.jpg",
+    gallery: makeCategoryGallery("sports", "Sports", 20)
+  },
+  {
+    id: "music",
+    title: "Music",
+    description: "A gallery full of music images.",
+    image: "images/categories-music.jpg",
+    gallery: makeCategoryGallery("music", "Music", 20)
+  },
+  {
+    id: "art",
+    title: "Art",
+    description: "A gallery full of art images.",
+    image: "images/categories-art.jpg",
+    gallery: makeCategoryGallery("art", "Art", 20)
+  },
+  {
+    id: "fashion",
+    title: "Fashion",
+    description: "A gallery full of fashion images.",
+    image: "images/categories-fashion.jpg",
+    gallery: makeCategoryGallery("fashion", "Fashion", 20)
+  },
+  {
+    id: "gaming",
+    title: "Gaming",
+    description: "A gallery full of gaming images.",
+    image: "images/categories-gaming.jpg",
+    gallery: makeCategoryGallery("gaming", "Gaming", 20)
+  },
+  {
+    id: "anime",
+    title: "Anime",
+    description: "A gallery full of anime images.",
+    image: "images/categories-anime.jpg",
+    gallery: makeCategoryGallery("anime", "Anime", 20)
+  },
+  {
+    id: "travel",
+    title: "Travel",
+    description: "A gallery full of travel images.",
+    image: "images/categories-travel.jpg",
+    gallery: makeCategoryGallery("travel", "Travel", 20)
+  },
+  {
+    id: "memes",
+    title: "Memes",
+    description: "A gallery full of meme images.",
+    image: "images/categories-memes.jpg",
+    gallery: makeCategoryGallery("memes", "Memes", 20)
+  },
+  {
+    id: "movies",
+    title: "Movies",
+    description: "A gallery full of movie images.",
+    image: "images/categories-movies.jpg",
+    gallery: makeCategoryGallery("movies", "Movies", 20)
+  },
+  {
+    id: "tech",
+    title: "Tech",
+    description: "A gallery full of tech images.",
+    image: "images/categories-tech.jpg",
+    gallery: makeCategoryGallery("tech", "Tech", 20)
+  },
+  {
+    id: "space",
+    title: "Space",
+    description: "A gallery full of space images.",
+    image: "images/categories-space.jpg",
+    gallery: makeCategoryGallery("space", "Space", 20)
+  },
+  {
+    id: "animals",
+    title: "Animals",
+    description: "A gallery full of animal images.",
+    image: "images/categories-animals.jpg",
+    gallery: makeCategoryGallery("animals", "Animals", 20)
+  },
+  {
+    id: "city",
+    title: "City",
+    description: "A gallery full of city images.",
+    image: "images/categories-city.jpg",
+    gallery: makeCategoryGallery("city", "City", 20)
   }
 ];
 
