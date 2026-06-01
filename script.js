@@ -476,7 +476,29 @@ function displayHomePage(list) {
     gallery.appendChild(card);
   });
 }
+function displayTrendingPage() {
+  currentView = "trending";
+  currentPerson = null;
 
+  gallery.innerHTML = "";
+  pageTitle.textContent = "Trending";
+  searchInput.value = "";
+  searchInput.placeholder = "Search trending...";
+  backBtn.style.display = "inline-block";
+
+  trendingBoxes.forEach(box => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.classList.add("trending-box");
+
+    card.innerHTML = `
+      <h2>${box.title}</h2>
+      <p>${box.description}</p>
+    `;
+
+    gallery.appendChild(card);
+  });
+}
 function displayPersonGallery(person) {
   currentView = "person";
   currentPerson = person;
