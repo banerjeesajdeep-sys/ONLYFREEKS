@@ -399,8 +399,18 @@ const backBtn = document.getElementById("backBtn");
 const pageTitle = document.getElementById("pageTitle");
 const siteLogo = document.getElementById("siteLogo");
 
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxClose = document.getElementById("lightboxClose");
+
 let currentView = "home";
 let currentPerson = null;
+
+function openLightbox(imageSrc, imageTitle) {
+  lightboxImage.src = imageSrc;
+  lightboxImage.alt = imageTitle;
+  lightbox.classList.add("open");
+}
 
 function displayHomePage(list) {
   currentView = "home";
@@ -461,6 +471,10 @@ function displayPersonGallery(person) {
       </div>
     `;
 
+    card.addEventListener("click", () => {
+      openLightbox(item.image, item.title);
+    });
+
     gallery.appendChild(card);
   });
 }
@@ -500,6 +514,10 @@ function searchPersonGallery() {
       </div>
     `;
 
+    card.addEventListener("click", () => {
+      openLightbox(item.image, item.title);
+    });
+
     gallery.appendChild(card);
   });
 }
@@ -520,8 +538,8 @@ backBtn.addEventListener("click", () => {
 siteLogo.addEventListener("click", () => {
   searchInput.value = "";
   displayHomePage(people);
-  
 });
+
 const sidebar = document.getElementById("sidebar");
 const sidebarToggle = document.getElementById("sidebarToggle");
 const sidebarClose = document.getElementById("sidebarClose");
@@ -532,6 +550,16 @@ sidebarToggle.addEventListener("click", () => {
 
 sidebarClose.addEventListener("click", () => {
   sidebar.classList.remove("open");
+});
+
+lightboxClose.addEventListener("click", () => {
+  lightbox.classList.remove("open");
+});
+
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) {
+    lightbox.classList.remove("open");
+  }
 });
 
 displayHomePage(people);
