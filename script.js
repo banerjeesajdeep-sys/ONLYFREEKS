@@ -498,8 +498,11 @@ function displayTrendingPage() {
     card.classList.add("trending-box");
 
     card.innerHTML = `
-      <h2>${box.title}</h2>
-      <p>${box.description}</p>
+      <img src="${box.image}" alt="${box.title}">
+      <div class="trending-info">
+        <h2>${box.title}</h2>
+        <p>${box.description}</p>
+      </div>
     `;
 
     gallery.appendChild(card);
