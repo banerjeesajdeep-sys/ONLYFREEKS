@@ -447,40 +447,46 @@ const trendingBoxes = [
 
 const categoryBoxes = [
   {
-    id: "popular",
-    title: "Popular",
-    description: "The most viewed galleries.",
-    image: "images/categories-popular.jpg"
+    id: "cats",
+    title: "Cats",
+    description: "A gallery full of cat images.",
+    image: "images/categories-cats.jpg",
+    gallery: makeCategoryGallery("cats", "Cats", 20)
   },
   {
-    id: "new",
-    title: "New",
-    description: "Recently added galleries.",
-    image: "images/categories-new.jpg"
+    id: "dogs",
+    title: "Dogs",
+    description: "A gallery full of dog images.",
+    image: "images/categories-dogs.jpg",
+    gallery: makeCategoryGallery("dogs", "Dogs", 20)
   },
   {
-    id: "featured",
-    title: "Featured",
-    description: "Hand-picked galleries.",
-    image: "images/categories-featured.jpg"
+    id: "cars",
+    title: "Cars",
+    description: "A gallery full of car images.",
+    image: "images/categories-cars.jpg",
+    gallery: makeCategoryGallery("cars", "Cars", 20)
   },
   {
-    id: "instagram",
-    title: "Instagram",
-    description: "Instagram-style creator galleries.",
-    image: "images/categories-instagram.jpg"
+    id: "nature",
+    title: "Nature",
+    description: "A gallery full of nature images.",
+    image: "images/categories-nature.jpg",
+    gallery: makeCategoryGallery("nature", "Nature", 20)
   },
   {
-    id: "tiktok",
-    title: "TikTok",
-    description: "TikTok-style creator galleries.",
-    image: "images/categories-tiktok.jpg"
+    id: "food",
+    title: "Food",
+    description: "A gallery full of food images.",
+    image: "images/categories-food.jpg",
+    gallery: makeCategoryGallery("food", "Food", 20)
   },
   {
-    id: "alt",
-    title: "Alt",
-    description: "Alternative-style galleries.",
-    image: "images/categories-alt.jpg"
+    id: "sports",
+    title: "Sports",
+    description: "A gallery full of sports images.",
+    image: "images/categories-sports.jpg",
+    gallery: makeCategoryGallery("sports", "Sports", 20)
   }
 ];
 
