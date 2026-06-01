@@ -104,10 +104,10 @@ const people = [
     gallery: makeGallery("karolrosado", "Karolrosado")
   },
   {
-    id: "person16",
-    name: "Person16",
-    image: "images/person16.jpg",
-    gallery: makeGallery("person16", "Person16")
+    id: "danicooppss",
+    name: "Danicooppss",
+    image: "images/danicooppss.jpg",
+    gallery: makeGallery("danicooppss", "Danicooppss")
   },
   {
     id: "person17",
