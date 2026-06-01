@@ -616,4 +616,17 @@ lightbox.addEventListener("click", event => {
   }
 });
 
+homeLink.addEventListener("click", event => {
+  event.preventDefault();
+  searchInput.value = "";
+  sidebar.classList.remove("open");
+  displayHomePage(people);
+});
+
+trendingLink.addEventListener("click", event => {
+  event.preventDefault();
+  sidebar.classList.remove("open");
+  displayTrendingPage();
+});
+
 displayHomePage(people);
