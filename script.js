@@ -447,34 +447,40 @@ const trendingBoxes = [
 
 const categoryBoxes = [
   {
-    title: "Models",
-    description: "Browse model-style galleries.",
-    image: "images/categories-models.jpg"
+    id: "popular",
+    title: "Popular",
+    description: "The most viewed galleries.",
+    image: "images/categories-popular.jpg"
   },
   {
-    title: "Cosplay",
-    description: "Character and costume-based galleries.",
-    image: "images/categories-cosplay.jpg"
+    id: "new",
+    title: "New",
+    description: "Recently added galleries.",
+    image: "images/categories-new.jpg"
   },
   {
-    title: "Fitness",
-    description: "Sporty and fitness-style galleries.",
-    image: "images/categories-fitness.jpg"
-  },
-  {
-    title: "Lifestyle",
-    description: "Casual, everyday-style galleries.",
-    image: "images/categories-lifestyle.jpg"
-  },
-  {
+    id: "featured",
     title: "Featured",
-    description: "Special highlighted galleries.",
+    description: "Hand-picked galleries.",
     image: "images/categories-featured.jpg"
   },
   {
-    title: "New",
-    description: "Recently added category pages.",
-    image: "images/categories-new.jpg"
+    id: "instagram",
+    title: "Instagram",
+    description: "Instagram-style creator galleries.",
+    image: "images/categories-instagram.jpg"
+  },
+  {
+    id: "tiktok",
+    title: "TikTok",
+    description: "TikTok-style creator galleries.",
+    image: "images/categories-tiktok.jpg"
+  },
+  {
+    id: "alt",
+    title: "Alt",
+    description: "Alternative-style galleries.",
+    image: "images/categories-alt.jpg"
   }
 ];
 
