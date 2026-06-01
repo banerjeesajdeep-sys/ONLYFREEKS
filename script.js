@@ -520,6 +520,18 @@ backBtn.addEventListener("click", () => {
 siteLogo.addEventListener("click", () => {
   searchInput.value = "";
   displayHomePage(people);
+  
+});
+const sidebar = document.getElementById("sidebar");
+const sidebarToggle = document.getElementById("sidebarToggle");
+const sidebarClose = document.getElementById("sidebarClose");
+
+sidebarToggle.addEventListener("click", () => {
+  sidebar.classList.add("open");
+});
+
+sidebarClose.addEventListener("click", () => {
+  sidebar.classList.remove("open");
 });
 
 displayHomePage(people);
