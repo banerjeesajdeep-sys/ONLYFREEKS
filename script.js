@@ -11,7 +11,19 @@ function makeGallery(id, name, totalImages = 50) {
     };
   });
 }
+function makeCategoryGallery(id, name, totalImages = 20) {
+  return Array.from({ length: totalImages }, (_, i) => {
+    const imageNumber = i + 1;
 
+    return {
+      title: `${name} Image ${imageNumber}`,
+      image:
+        imageNumber === 1
+          ? `images/${id}.jpg`
+          : `images/${id}-${imageNumber}.jpg`
+    };
+  });
+}
 const people = [
   {
     id: "tanababyxo",
