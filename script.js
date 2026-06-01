@@ -24,6 +24,7 @@ function makeCategoryGallery(id, name, totalImages = 20) {
     };
   });
 }
+
 const people = [
   {
     id: "tanababyxo",
