@@ -95,7 +95,7 @@ const people = [
     id: "perischeer",
     name: "Perrischeer",
     image: "images/perrischeer.jpg",
-    gallery: makeGallery("perrischeer", "Perrischeer")
+    gallery: makeGallery("perrischeer", "Perrischeer", 10)
   },
   {
     id: "person15",
