@@ -263,3 +263,23 @@ body {
   font-size: 42px;
   cursor: pointer;
 }
+.trending-box {
+  min-height: 180px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    radial-gradient(circle at top left, rgba(255, 62, 203, 0.35), transparent 45%),
+    linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(0, 234, 255, 0.12));
+}
+
+.trending-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.trending-box p {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
