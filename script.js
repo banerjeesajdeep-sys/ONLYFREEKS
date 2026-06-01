@@ -403,6 +403,38 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxClose = document.getElementById("lightboxClose");
 
+const homeLink = document.getElementById("homeLink");
+const trendingLink = document.getElementById("trendingLink");
+const categoriesLink = document.getElementById("categoriesLink");
+const favoritesLink = document.getElementById("favoritesLink");
+
+const trendingBoxes = [
+  {
+    title: "Most Viewed",
+    description: "The most clicked galleries right now."
+  },
+  {
+    title: "New Drops",
+    description: "Recently added galleries and updates."
+  },
+  {
+    title: "Top Rated",
+    description: "Popular picks people keep coming back to."
+  },
+  {
+    title: "Rising",
+    description: "Characters getting more attention lately."
+  },
+  {
+    title: "Featured",
+    description: "Hand-picked boxes for the front page."
+  },
+  {
+    title: "Fresh Finds",
+    description: "New pages worth checking out."
+  }
+];
+
 let currentView = "home";
 let currentPerson = null;
 
