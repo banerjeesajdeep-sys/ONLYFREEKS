@@ -582,18 +582,22 @@ function displayCategoriesPage() {
   searchInput.placeholder = "Search categories...";
   backBtn.style.display = "inline-block";
 
-  categoryBoxes.forEach(box => {
+  categoryBoxes.forEach(category => {
     const card = document.createElement("div");
     card.classList.add("card");
     card.classList.add("trending-box");
 
     card.innerHTML = `
-      <img src="${box.image}" alt="${box.title}">
+      <img src="${category.image}" alt="${category.title}">
       <div class="trending-info">
-        <h2>${box.title}</h2>
-        <p>${box.description}</p>
+        <h2>${category.title}</h2>
+        <p>${category.description}</p>
       </div>
     `;
+
+    card.addEventListener("click", () => {
+      displayCategoryGallery(category);
+    });
 
     gallery.appendChild(card);
   });
