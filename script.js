@@ -464,42 +464,42 @@ const categoryBoxes = [
     title: "Ass",
     description: "A gallery full of ass images.",
     image: "images/categories-ass.jpg",
-    gallery: makeCategoryGallery("ass", "Ass", 20)
+    gallery: makeCategoryGallery("ass", "Ass", 40)
   },
   {
     id: "tits",
     title: "Tits",
     description: "A gallery full of tit images.",
     image: "images/categories-tits.jpg",
-    gallery: makeCategoryGallery("tits", "Tits", 20)
+    gallery: makeCategoryGallery("tits", "Tits", 40)
   },
   {
     id: "thighs",
     title: "Thighs",
     description: "A gallery full of thigh images.",
     image: "images/categories-thighs.jpg",
-    gallery: makeCategoryGallery("thighs", "Thighs", 20)
+    gallery: makeCategoryGallery("thighs", "Thighs", 40)
   },
   {
     id: "goth",
     title: "Goth",
     description: "A gallery full of goth images.",
     image: "images/categories-goth.jpg",
-    gallery: makeCategoryGallery("goth", "Goth", 20)
+    gallery: makeCategoryGallery("goth", "Goth", 40)
   },
   {
     id: "athletic",
     title: "Athletic",
     description: "A gallery full of athletic images.",
     image: "images/categories-athletic.jpg",
-    gallery: makeCategoryGallery("athletic", "Athletic", 20)
+    gallery: makeCategoryGallery("athletic", "Athletic", 40)
   },
   {
     id: "feet",
     title: "Feet",
     description: "A gallery full of feet images.",
     image: "images/categories-feet.jpg",
-    gallery: makeCategoryGallery("feet", "Feet", 20)
+    gallery: makeCategoryGallery("feet", "Feet", 40)
   }
 ];
 
