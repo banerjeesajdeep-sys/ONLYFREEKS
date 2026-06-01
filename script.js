@@ -460,81 +460,81 @@ const trendingBoxes = [
 
 const categoryBoxes = [
   {
-    id: "cats",
-    title: "Cats",
-    description: "A gallery full of cat images.",
-    image: "images/categories-cats.jpg",
-    gallery: makeCategoryGallery("cats", "Cats", 20)
+    id: "ass",
+    title: "Ass",
+    description: "A gallery full of ass images.",
+    image: "images/categories-ass.jpg",
+    gallery: makeCategoryGallery("ass", "Ass", 20)
   },
   {
-    id: "dogs",
-    title: "Dogs",
-    description: "A gallery full of dog images.",
-    image: "images/categories-dogs.jpg",
-    gallery: makeCategoryGallery("dogs", "Dogs", 20)
+    id: "tits",
+    title: "Tits",
+    description: "A gallery full of tit images.",
+    image: "images/categories-tits.jpg",
+    gallery: makeCategoryGallery("tits", "Tits", 20)
   },
   {
-    id: "cars",
-    title: "Cars",
-    description: "A gallery full of car images.",
-    image: "images/categories-cars.jpg",
-    gallery: makeCategoryGallery("cars", "Cars", 20)
+    id: "pusst",
+    title: "Pussy",
+    description: "A gallery full of pussy images.",
+    image: "images/categories-pussy.jpg",
+    gallery: makeCategoryGallery("pussy", "Pussy", 20)
   },
   {
-    id: "nature",
-    title: "Nature",
-    description: "A gallery full of nature images.",
-    image: "images/categories-nature.jpg",
-    gallery: makeCategoryGallery("nature", "Nature", 20)
+    id: "anal",
+    title: "Anal",
+    description: "A gallery full of anal images.",
+    image: "images/categories-anal.jpg",
+    gallery: makeCategoryGallery("anal", "Anal", 20)
   },
   {
-    id: "food",
-    title: "Food",
-    description: "A gallery full of food images.",
-    image: "images/categories-food.jpg",
-    gallery: makeCategoryGallery("food", "Food", 20)
+    id: "large",
+    title: "Large",
+    description: "A gallery full of large images.",
+    image: "images/categories-large.jpg",
+    gallery: makeCategoryGallery("large", "Large", 20)
   },
   {
-    id: "sports",
-    title: "Sports",
-    description: "A gallery full of sports images.",
-    image: "images/categories-sports.jpg",
-    gallery: makeCategoryGallery("sports", "Sports", 20)
+    id: "petite",
+    title: "Petite",
+    description: "A gallery full of petite images.",
+    image: "images/categories-petite.jpg",
+    gallery: makeCategoryGallery("petite", "Petite", 20)
   },
   {
-    id: "music",
-    title: "Music",
-    description: "A gallery full of music images.",
-    image: "images/categories-music.jpg",
-    gallery: makeCategoryGallery("music", "Music", 20)
+    id: "milf",
+    title: "Milf",
+    description: "A gallery full of milf images.",
+    image: "images/categories-milf.jpg",
+    gallery: makeCategoryGallery("milf", "Milf", 20)
   },
   {
-    id: "art",
-    title: "Art",
-    description: "A gallery full of art images.",
-    image: "images/categories-art.jpg",
-    gallery: makeCategoryGallery("art", "Art", 20)
+    id: "ginger",
+    title: "Ginger",
+    description: "A gallery full of ginger images.",
+    image: "images/categories-ginger.jpg",
+    gallery: makeCategoryGallery("ginger", "Ginger", 20)
   },
   {
-    id: "fashion",
-    title: "Fashion",
-    description: "A gallery full of fashion images.",
-    image: "images/categories-fashion.jpg",
-    gallery: makeCategoryGallery("fashion", "Fashion", 20)
+    id: "ebony",
+    title: "Ebony",
+    description: "A gallery full of ebony images.",
+    image: "images/categories-ebony.jpg",
+    gallery: makeCategoryGallery("ebony", "Ebony", 20)
   },
   {
-    id: "gaming",
-    title: "Gaming",
-    description: "A gallery full of gaming images.",
-    image: "images/categories-gaming.jpg",
-    gallery: makeCategoryGallery("gaming", "Gaming", 20)
+    id: "brailian",
+    title: "Brazilian",
+    description: "A gallery full of brazilian images.",
+    image: "images/categories-brazilian.jpg",
+    gallery: makeCategoryGallery("brazilian", "Brazilian", 20)
   },
   {
-    id: "anime",
-    title: "Anime",
-    description: "A gallery full of anime images.",
-    image: "images/categories-anime.jpg",
-    gallery: makeCategoryGallery("anime", "Anime", 20)
+    id: "feet",
+    title: "Feet",
+    description: "A gallery full of feet images.",
+    image: "images/categories-feet.jpg",
+    gallery: makeCategoryGallery("feet", "Feet", 20)
   },
   {
     id: "travel",
