@@ -185,3 +185,60 @@ body {
     height: 220px;
   }
 }
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  padding: 20px;
+  z-index: 9999;
+  transition: left 0.3s ease;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 18px 0;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: #ff4fd8;
+  transform: translateX(5px);
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 34px;
+  cursor: pointer;
+}
