@@ -579,11 +579,10 @@ function searchPersonGallery() {
 searchInput.addEventListener("input", () => {
   if (currentView === "home") {
     searchHomePage();
-  } else {
+  } else if (currentView === "person") {
     searchPersonGallery();
   }
 });
-
 backBtn.addEventListener("click", () => {
   searchInput.value = "";
   displayHomePage(people);
