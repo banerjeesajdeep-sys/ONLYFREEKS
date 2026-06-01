@@ -92,10 +92,10 @@ const people = [
     gallery: makeGallery("seracortinez", "Seracortinez")
   },
   {
-    id: "perrischeer",
-    name: "Perrischeer",
-    image: "images/perrischeer.jpg",
-    gallery: makeGallery("perrischeer", "Perrischeer", 10)
+    id: "perischeer",
+    name: "Perischeer",
+    image: "images/perischeer.jpg",
+    gallery: makeGallery("perischeer", "Perischeer", 10)
   },
   {
     id: "person15",
