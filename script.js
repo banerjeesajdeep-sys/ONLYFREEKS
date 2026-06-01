@@ -408,6 +408,10 @@ const trendingLink = document.getElementById("trendingLink");
 const categoriesLink = document.getElementById("categoriesLink");
 const favoritesLink = document.getElementById("favoritesLink");
 
+const sidebar = document.getElementById("sidebar");
+const sidebarToggle = document.getElementById("sidebarToggle");
+const sidebarClose = document.getElementById("sidebarClose");
+
 const trendingBoxes = [
   {
     title: "Most Viewed",
@@ -438,6 +442,39 @@ const trendingBoxes = [
     title: "Fresh Finds",
     description: "New pages worth checking out.",
     image: "images/trending-fresh-finds.jpg"
+  }
+];
+
+const categoryBoxes = [
+  {
+    title: "Models",
+    description: "Browse model-style galleries.",
+    image: "images/categories-models.jpg"
+  },
+  {
+    title: "Cosplay",
+    description: "Character and costume-based galleries.",
+    image: "images/categories-cosplay.jpg"
+  },
+  {
+    title: "Fitness",
+    description: "Sporty and fitness-style galleries.",
+    image: "images/categories-fitness.jpg"
+  },
+  {
+    title: "Lifestyle",
+    description: "Casual, everyday-style galleries.",
+    image: "images/categories-lifestyle.jpg"
+  },
+  {
+    title: "Featured",
+    description: "Special highlighted galleries.",
+    image: "images/categories-featured.jpg"
+  },
+  {
+    title: "New",
+    description: "Recently added category pages.",
+    image: "images/categories-new.jpg"
   }
 ];
 
@@ -482,6 +519,7 @@ function displayHomePage(list) {
     gallery.appendChild(card);
   });
 }
+
 function displayTrendingPage() {
   currentView = "trending";
   currentPerson = null;
@@ -508,6 +546,49 @@ function displayTrendingPage() {
     gallery.appendChild(card);
   });
 }
+
+function displayCategoriesPage() {
+  currentView = "categories";
+  currentPerson = null;
+
+  gallery.innerHTML = "";
+  pageTitle.textContent = "Categories";
+  searchInput.value = "";
+  searchInput.placeholder = "Search categories...";
+  backBtn.style.display = "inline-block";
+
+  categoryBoxes.forEach(box => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.classList.add("trending-box");
+
+    card.innerHTML = `
+      <img src="${box.image}" alt="${box.title}">
+      <div class="trending-info">
+        <h2>${box.title}</h2>
+        <p>${box.description}</p>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
+}
+
+function displayFavoritesPage() {
+  currentView = "favorites";
+  currentPerson = null;
+
+  gallery.innerHTML = "";
+  pageTitle.textContent = "Favorites";
+  searchInput.value = "";
+  searchInput.placeholder = "Search favorites...";
+  backBtn.style.display = "inline-block";
+
+  gallery.innerHTML = `
+    <p class="no-results">No favorites added yet.</p>
+  `;
+}
+
 function displayPersonGallery(person) {
   currentView = "person";
   currentPerson = person;
@@ -585,13 +666,82 @@ function searchPersonGallery() {
   });
 }
 
+function searchTrendingPage() {
+  const searchValue = searchInput.value.toLowerCase();
+
+  const filteredBoxes = trendingBoxes.filter(box =>
+    box.title.toLowerCase().includes(searchValue) ||
+    box.description.toLowerCase().includes(searchValue)
+  );
+
+  gallery.innerHTML = "";
+
+  if (filteredBoxes.length === 0) {
+    gallery.innerHTML = `<p class="no-results">No results found.</p>`;
+    return;
+  }
+
+  filteredBoxes.forEach(box => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.classList.add("trending-box");
+
+    card.innerHTML = `
+      <img src="${box.image}" alt="${box.title}">
+      <div class="trending-info">
+        <h2>${box.title}</h2>
+        <p>${box.description}</p>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
+}
+
+function searchCategoriesPage() {
+  const searchValue = searchInput.value.toLowerCase();
+
+  const filteredBoxes = categoryBoxes.filter(box =>
+    box.title.toLowerCase().includes(searchValue) ||
+    box.description.toLowerCase().includes(searchValue)
+  );
+
+  gallery.innerHTML = "";
+
+  if (filteredBoxes.length === 0) {
+    gallery.innerHTML = `<p class="no-results">No results found.</p>`;
+    return;
+  }
+
+  filteredBoxes.forEach(box => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.classList.add("trending-box");
+
+    card.innerHTML = `
+      <img src="${box.image}" alt="${box.title}">
+      <div class="trending-info">
+        <h2>${box.title}</h2>
+        <p>${box.description}</p>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
+}
+
 searchInput.addEventListener("input", () => {
   if (currentView === "home") {
     searchHomePage();
   } else if (currentView === "person") {
     searchPersonGallery();
+  } else if (currentView === "trending") {
+    searchTrendingPage();
+  } else if (currentView === "categories") {
+    searchCategoriesPage();
   }
 });
+
 backBtn.addEventListener("click", () => {
   searchInput.value = "";
   displayHomePage(people);
@@ -601,10 +751,6 @@ siteLogo.addEventListener("click", () => {
   searchInput.value = "";
   displayHomePage(people);
 });
-
-const sidebar = document.getElementById("sidebar");
-const sidebarToggle = document.getElementById("sidebarToggle");
-const sidebarClose = document.getElementById("sidebarClose");
 
 sidebarToggle.addEventListener("click", () => {
   sidebar.classList.add("open");
@@ -633,8 +779,23 @@ homeLink.addEventListener("click", event => {
 
 trendingLink.addEventListener("click", event => {
   event.preventDefault();
+  searchInput.value = "";
   sidebar.classList.remove("open");
   displayTrendingPage();
+});
+
+categoriesLink.addEventListener("click", event => {
+  event.preventDefault();
+  searchInput.value = "";
+  sidebar.classList.remove("open");
+  displayCategoriesPage();
+});
+
+favoritesLink.addEventListener("click", event => {
+  event.preventDefault();
+  searchInput.value = "";
+  sidebar.classList.remove("open");
+  displayFavoritesPage();
 });
 
 displayHomePage(people);
