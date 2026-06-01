@@ -411,27 +411,33 @@ const favoritesLink = document.getElementById("favoritesLink");
 const trendingBoxes = [
   {
     title: "Most Viewed",
-    description: "The most clicked galleries right now."
+    description: "The most clicked galleries right now.",
+    image: "images/trending-most-viewed.jpg"
   },
   {
     title: "New Drops",
-    description: "Recently added galleries and updates."
+    description: "Recently added galleries and updates.",
+    image: "images/trending-new-drops.jpg"
   },
   {
     title: "Top Rated",
-    description: "Popular picks people keep coming back to."
+    description: "Popular picks people keep coming back to.",
+    image: "images/trending-top-rated.jpg"
   },
   {
     title: "Rising",
-    description: "Characters getting more attention lately."
+    description: "Characters getting more attention lately.",
+    image: "images/trending-rising.jpg"
   },
   {
     title: "Featured",
-    description: "Hand-picked boxes for the front page."
+    description: "Hand-picked boxes for the front page.",
+    image: "images/trending-featured.jpg"
   },
   {
     title: "Fresh Finds",
-    description: "New pages worth checking out."
+    description: "New pages worth checking out.",
+    image: "images/trending-fresh-finds.jpg"
   }
 ];
 
