@@ -11,6 +11,7 @@ function makeGallery(id, name, totalImages = 50) {
     };
   });
 }
+
 function makeCategoryGallery(id, name, totalImages = 20) {
   return Array.from({ length: totalImages }, (_, i) => {
     const imageNumber = i + 1;
@@ -412,9 +413,12 @@ const backBtn = document.getElementById("backBtn");
 const pageTitle = document.getElementById("pageTitle");
 const siteLogo = document.getElementById("siteLogo");
 
-const lightbox = document.getElementById("lightbox");
+const imageLightbox = document.getElementById("imageLightbox");
 const lightboxImage = document.getElementById("lightboxImage");
-const lightboxClose = document.getElementById("lightboxClose");
+const closeLightbox = document.getElementById("closeLightbox");
+const prevImageBtn = document.getElementById("prevImageBtn");
+const nextImageBtn = document.getElementById("nextImageBtn");
+const zoomImageBtn = document.getElementById("zoomImageBtn");
 
 const homeLink = document.getElementById("homeLink");
 const trendingLink = document.getElementById("trendingLink");
@@ -589,11 +593,84 @@ const categoryBoxes = [
 
 let currentView = "home";
 let currentPerson = null;
+let currentGalleryImages = [];
+let currentImageIndex = 0;
+let isZoomed = false;
 
-function openLightbox(imageSrc, imageTitle) {
-  lightboxImage.src = imageSrc;
-  lightboxImage.alt = imageTitle;
-  lightbox.classList.add("open");
+function getLightboxImageData(item) {
+  if (typeof item === "string") {
+    return { image: item, title: "Gallery image" };
+  }
+
+  return {
+    image: item.image,
+    title: item.title || "Gallery image"
+  };
+}
+
+function openLightbox(images, index) {
+  currentGalleryImages = images;
+  currentImageIndex = index;
+  isZoomed = false;
+
+  const currentItem = getLightboxImageData(currentGalleryImages[currentImageIndex]);
+
+  lightboxImage.classList.remove("zoomed");
+  lightboxImage.src = currentItem.image;
+  lightboxImage.alt = currentItem.title;
+
+  imageLightbox.classList.add("active");
+}
+
+function closeImageLightbox() {
+  imageLightbox.classList.remove("active");
+  lightboxImage.src = "";
+  lightboxImage.alt = "Opened gallery image";
+  lightboxImage.classList.remove("zoomed");
+  isZoomed = false;
+}
+
+function showCurrentLightboxImage() {
+  const currentItem = getLightboxImageData(currentGalleryImages[currentImageIndex]);
+
+  lightboxImage.src = currentItem.image;
+  lightboxImage.alt = currentItem.title;
+  lightboxImage.classList.remove("zoomed");
+  isZoomed = false;
+}
+
+function showNextImage() {
+  if (currentGalleryImages.length === 0) return;
+
+  currentImageIndex++;
+
+  if (currentImageIndex >= currentGalleryImages.length) {
+    currentImageIndex = 0;
+  }
+
+  showCurrentLightboxImage();
+}
+
+function showPreviousImage() {
+  if (currentGalleryImages.length === 0) return;
+
+  currentImageIndex--;
+
+  if (currentImageIndex < 0) {
+    currentImageIndex = currentGalleryImages.length - 1;
+  }
+
+  showCurrentLightboxImage();
+}
+
+function toggleZoom() {
+  isZoomed = !isZoomed;
+
+  if (isZoomed) {
+    lightboxImage.classList.add("zoomed");
+  } else {
+    lightboxImage.classList.remove("zoomed");
+  }
 }
 
 function displayHomePage(list) {
@@ -717,7 +794,7 @@ function displayPersonGallery(person) {
     return;
   }
 
-  person.gallery.forEach(item => {
+  person.gallery.forEach((item, index) => {
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -729,7 +806,41 @@ function displayPersonGallery(person) {
     `;
 
     card.addEventListener("click", () => {
-      openLightbox(item.image, item.title);
+      openLightbox(person.gallery, index);
+    });
+
+    gallery.appendChild(card);
+  });
+}
+
+function displayCategoryGallery(category) {
+  currentView = "categoryGallery";
+  currentPerson = null;
+
+  gallery.innerHTML = "";
+  pageTitle.textContent = category.title;
+  searchInput.value = "";
+  searchInput.placeholder = `Search ${category.title} gallery...`;
+  backBtn.style.display = "inline-block";
+
+  if (category.gallery.length === 0) {
+    gallery.innerHTML = `<p class="no-results">No images added yet.</p>`;
+    return;
+  }
+
+  category.gallery.forEach((item, index) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.title}">
+      <div class="card-info">
+        <h2>${item.title}</h2>
+      </div>
+    `;
+
+    card.addEventListener("click", () => {
+      openLightbox(category.gallery, index);
     });
 
     gallery.appendChild(card);
@@ -760,7 +871,7 @@ function searchPersonGallery() {
     return;
   }
 
-  filteredGallery.forEach(item => {
+  filteredGallery.forEach((item, index) => {
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -772,7 +883,7 @@ function searchPersonGallery() {
     `;
 
     card.addEventListener("click", () => {
-      openLightbox(item.image, item.title);
+      openLightbox(filteredGallery, index);
     });
 
     gallery.appendChild(card);
@@ -839,6 +950,10 @@ function searchCategoriesPage() {
       </div>
     `;
 
+    card.addEventListener("click", () => {
+      displayCategoryGallery(box);
+    });
+
     gallery.appendChild(card);
   });
 }
@@ -873,13 +988,30 @@ sidebarClose.addEventListener("click", () => {
   sidebar.classList.remove("open");
 });
 
-lightboxClose.addEventListener("click", () => {
-  lightbox.classList.remove("open");
+closeLightbox.addEventListener("click", closeImageLightbox);
+nextImageBtn.addEventListener("click", showNextImage);
+prevImageBtn.addEventListener("click", showPreviousImage);
+zoomImageBtn.addEventListener("click", toggleZoom);
+
+imageLightbox.addEventListener("click", event => {
+  if (event.target === imageLightbox) {
+    closeImageLightbox();
+  }
 });
 
-lightbox.addEventListener("click", event => {
-  if (event.target === lightbox) {
-    lightbox.classList.remove("open");
+document.addEventListener("keydown", event => {
+  if (!imageLightbox.classList.contains("active")) return;
+
+  if (event.key === "ArrowRight") {
+    showNextImage();
+  }
+
+  if (event.key === "ArrowLeft") {
+    showPreviousImage();
+  }
+
+  if (event.key === "Escape") {
+    closeImageLightbox();
   }
 });
 
