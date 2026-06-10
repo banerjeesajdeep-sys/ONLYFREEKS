@@ -322,3 +322,137 @@ body {
   opacity: 0.85;
   font-size: 0.95rem;
 }
+/* Fullscreen image viewer */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.image-lightbox.active {
+  display: flex;
+}
+
+.lightbox-image-wrap {
+  max-width: 85vw;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#lightboxImage {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 18px;
+  transition: transform 0.25s ease;
+  cursor: grab;
+}
+
+#lightboxImage.zoomed {
+  transform: scale(1.8);
+  cursor: zoom-out;
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 38px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Left and right arrows */
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  font-size: 52px;
+  line-height: 40px;
+  color: white;
+  background: rgba(255, 255, 255, 0.13);
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox-arrow-left {
+  left: 28px;
+}
+
+.lightbox-arrow-right {
+  right: 28px;
+}
+
+/* Magnifying glass button */
+.zoom-btn {
+  position: absolute;
+  bottom: 28px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  font-size: 25px;
+  background: linear-gradient(135deg, #ff2bd6, #8b2bff);
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+  box-shadow: 0 0 18px rgba(255, 43, 214, 0.5);
+}
+
+.zoom-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .lightbox-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 42px;
+  }
+
+  .lightbox-arrow-left {
+    left: 10px;
+  }
+
+  .lightbox-arrow-right {
+    right: 10px;
+  }
+
+  .zoom-btn {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+  }
+}
